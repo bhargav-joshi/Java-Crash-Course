@@ -1,13 +1,13 @@
 import java.util.Scanner;
-public class SortFunction
+public class SortFun 
 {
     public static void main(String[] args) throws Exception
     {
     	int count, temp;
     	
     
-     Scanner scan = new Scanner(System.in);
-     System.out.print("Enter number of elements you want in the array:");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter number of elements you want in the array: ");
         count = scan.nextInt();
     
         int num[] = new int[count];
