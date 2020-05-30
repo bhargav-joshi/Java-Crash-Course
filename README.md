@@ -49,4 +49,36 @@ java.applet | Contains classes for creating Applets.
 java.awt | Contains classes for implementing the components of graphical user interface ( like buttons, menus, etc. ).
 java.net | Contains classes for supporting networking operations.
 
+## Objects and Classes in Java
+
+##### What is an object in Java ?
+
+An entity that has state and behavior is known as an object e.g., chair, bike, marker, pen, table, car, etc. It can be physical or logical (tangible and intangible). The example of an intangible object is the banking system.
+
+## Class in Java
+
+A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+
+A class in Java can contain:
+
+* *Fields*
+* *Methods*
+* *Constructors*
+* *Blocks*
+* *Nested class and interface*
+
+**Syntax -**
+
+class <class_name>{  
+    field;  
+    method;  
+}  
+
+## Different ways to create an object in Java?
+
+By new keyword
+By newInstance() method
+By clone() method
+By deserialization
+By factory method etc.
 
