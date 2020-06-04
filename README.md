@@ -82,3 +82,32 @@ By clone() method
 By deserialization
 By factory method etc.
 
+# Java - Applet
+
+An applet is a Java program that runs in a Web browser. An applet can be a fully functional Java application because it has the entire Java API at its disposal.
+
+## Life Cycle of an Applet
+
+* init − This method is intended for whatever initialization is needed for your applet. It is called after the param tags inside the applet tag have been processed.
+
+* start − This method is automatically called after the browser calls the init method. It is also called whenever the user returns to the page containing the applet after having gone off to other pages.
+
+* stop − This method is automatically called when the user moves off the page on which the applet sits. It can, therefore, be called repeatedly in the same applet.
+
+* destroy − This method is only called when the browser shuts down normally. Because applets are meant to live on an HTML page, you should not normally leave resources behind after a user leaves the page that contains the applet.
+
+* paint − Invoked immediately after the start() method, and also any time the applet needs to repaint itself in the browser. The paint() method is actually inherited from the java.awt.
+
+#### Example - 
+
+```
+import java.applet.*;
+import java.awt.*;
+
+public class Example extends Applet {
+   public void paint (Graphics g) {
+      g.drawString ("Hello Java Course !!", 25, 50);
+   }
+}
+```
+
