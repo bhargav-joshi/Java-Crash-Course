@@ -110,4 +110,71 @@ public class Example extends Applet {
    }
 }
 ```
+# Java ActionListener -Interface
 
+The Java ActionListener is notified whenever you click on the button or menu item. It is notified against ActionEvent. The ActionListener interface is found in java.awt.event package. It has only one method: actionPerformed().
+
+Interface declaration
+Following is the declaration for java.awt.event.ActionListener interface:
+
+```public interface ActionListener
+   extends EventListener
+ ```
+#### Interface methods -
+   **void actionPerformed(ActionEvent e)**
+Invoked when an action occurs.
+
+**Methods inherited
+This interface inherits methods from the following interfaces:**
+
+*java.awt.EventListener*
+
+#### Eg.
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class ActionListenerExample extends JFrame implements ActionListener
+{
+    JLabel lblData;
+    JButton btnOk,btnCancel;
+    ActionListenerExample()
+    {
+      setLayout(new FlowLayout());
+      lblData = new JLabel("Click any button to display data");
+      btnOk=new JButton("OK");
+      btnCancel = new JButton("Cancel");
+      btnOk.addActionListener(this);
+      btnCancel.addActionListener(this);
+      add(lblData);
+      add(btnOk);
+      add(btnCancel);
+    }
+ 
+   public void actionPerformed(ActionEvent e)
+   {
+    if(e.getSource() == btnOk)
+       lblData.setText("OK Button is Clicked ");
+    else
+       lblData.setText("Cancel Button is Clicked ");
+   }
+}
+ class ActionListenerJavaExample
+ {
+    public static void main(String args[])
+    {
+         ActionListenerExample frame = new ActionListenerExample();
+        frame.setTitle("ActionListener in Java Swing Examples");
+        frame.setBounds(200,150,180,150);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+   }
+ }
+```
+
+**This Example will generate a GUI interface and after running it you can see there are two buttons so if you can see that you have clicked or not ? It will tell you after clicking which button is clicked**
+
+
+ 
+   
